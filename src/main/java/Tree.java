@@ -189,7 +189,7 @@ public class Tree {
         moscowC.add(re);
         moscow.add(moscowC);
         tree.root.add(moscow);
-        //Ebanaya udmurtia
+        //udmurtia
         Node udmurtia = Node.newBuilder()
                 .setName("Удмуртия")
                 .setPriority(100)
@@ -242,6 +242,8 @@ public class Tree {
         public IteratorBFS() {
             this.current = root;
             deque.addAll(current.children);
+            deque.push(root);
+
         }
 
         @Override
@@ -267,6 +269,8 @@ public class Tree {
         public IteratorDFS() {
             this.current = root;
             deque.addAll(current.children);
+            deque.push(root);
+
         }
 
         @Override
