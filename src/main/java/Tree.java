@@ -189,7 +189,7 @@ public class Tree {
         moscowC.add(re);
         moscow.add(moscowC);
         tree.root.add(moscow);
-        //Ebanaya udmurtia
+        //udmurtia
         Node udmurtia = Node.newBuilder()
                 .setName("Удмуртия")
                 .setPriority(100)
