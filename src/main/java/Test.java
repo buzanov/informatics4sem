@@ -4,7 +4,10 @@ import java.util.Iterator;
 
 public class Test {
     public static void main(String[] args) {
-        Tree tree = Tree.getFilledTree();
+        Tree tree = Saver.getInstance().read(1);
+        tree.normalize();
+//        Tree tree = Tree.getFilledTree();
+//        Saver.getInstance().save(tree);
         Interpreter.handle(tree, "add Казань,Вахитовский,Пушкина 29A HOUSE 100");
         Iterator<Tree.Node> interpreter = tree.iteratorDFS();
         Interpreter.handle(tree, "delete Удмуртия,Ижевск");

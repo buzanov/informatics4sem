@@ -7,11 +7,9 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
 public class Tree {
     Node root;
-    List<Node> children;
 
     public Node getRoot() {
         return root;
@@ -98,9 +96,20 @@ public class Tree {
 
     public Tree(Node root) {
         this.root = root;
-        children = new ArrayList<>();
     }
 
+    public void normalize() {
+        normalize0(root);
+    }
+
+    private void normalize0(Node node) {
+        if (!node.children.isEmpty()) {
+            for (Node child : node.children) {
+                child.parent = node;
+                normalize0(child);
+            }
+        }
+    }
 
     public static Tree getFilledTree() {
         //Tataria
