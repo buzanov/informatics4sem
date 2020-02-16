@@ -241,8 +241,7 @@ public class Tree {
 
         public IteratorBFS() {
             this.current = root;
-            deque.addAll(current.children);
-            deque.push(root);
+            deque.push(current);
 
         }
 
@@ -253,11 +252,11 @@ public class Tree {
 
         @Override
         public Node next() {
-            Node node = deque.pop();
-            if (!node.children.isEmpty()) {
-                node.children.forEach(o -> deque.addLast(o));
+            current = deque.pop();
+            if (!current.children.isEmpty()) {
+                current.children.forEach(o -> deque.addLast(o));
             }
-            return node;
+            return current;
         }
     }
 
@@ -268,8 +267,7 @@ public class Tree {
 
         public IteratorDFS() {
             this.current = root;
-            deque.addAll(current.children);
-            deque.push(root);
+            deque.push(current);
 
         }
 
@@ -280,11 +278,11 @@ public class Tree {
 
         @Override
         public Node next() {
-            Node node = deque.pop();
-            if (!node.children.isEmpty()) {
-                node.children.forEach(o -> deque.push(o));
+             current = deque.pop();
+            if (!current.children.isEmpty()) {
+                current.children.forEach(o -> deque.push(o));
             }
-            return node;
+            return current;
         }
     }
 
@@ -297,8 +295,7 @@ public class Tree {
 
         public IteratorBFSP() {
             this.current = root;
-            deque.addAll(current.children.stream().sorted(Comparator.comparingInt(o -> o.priority)).collect(Collectors.toList()));
-            deque.push(root);
+            deque.push(current);
         }
 
         @Override
@@ -308,11 +305,11 @@ public class Tree {
 
         @Override
         public Node next() {
-            Node node = deque.pop();
-            if (!node.children.isEmpty()) {
-                node.children.stream().sorted(comparator).forEachOrdered(o -> deque.addLast(o));
+            current = deque.pop();
+            if (!current.children.isEmpty()) {
+                current.children.stream().sorted(comparator).forEachOrdered(o -> deque.addLast(o));
             }
-            return node;
+            return current;
         }
     }
 
