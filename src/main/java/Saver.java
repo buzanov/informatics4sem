@@ -1,3 +1,6 @@
+import model.Tree;
+import parser.JsonParser;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -27,7 +30,7 @@ public class Saver {
 
     public void save(Tree tree) {
         try {
-            writer.write(Facade.getInstance().WriteTree(tree) + "\n");
+            writer.write(JsonParser.getInstance().write(tree) + "\n");
             writer.flush();
         } catch (IOException e) {
             throw new IllegalArgumentException(e);
@@ -40,7 +43,7 @@ public class Saver {
         while (sc.hasNextLine()) {
             line = sc.nextLine();
             if (i == index) {
-                return Facade.getInstance().ReadTree(line);
+                return JsonParser.getInstance().read(line);
             }
             i++;
         }

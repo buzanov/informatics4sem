@@ -1,3 +1,6 @@
+import model.Tree;
+import model.Type;
+
 import java.util.Iterator;
 
 public class Interpreter {
@@ -21,14 +24,13 @@ public class Interpreter {
     }
 
     private static void add(Tree tree, String query) {
-        Iterator<Tree.Node> iterator = tree.iteratorBFS();
         String[] words = query.split(" ");
         Tree.Node parent = findByAddress(tree, words[1]);
         Type type = null;
         try {
             type = Type.valueOf(words[3]);
         } catch (IllegalArgumentException e) {
-//            System.out.println("Wrong type of Type:)");
+//            System.out.println("Wrong type of model.Type:)");
         }
         if (type != null && parent != null)
             parent.add(Tree.Node.newBuilder()
