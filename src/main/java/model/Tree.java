@@ -57,12 +57,12 @@ public class Tree {
 
         }
 
-        public static Builder newBuilder() {
-            return (new Node()).new Builder();
-        }
-
         public void setParent(Node node) {
             this.parent = node;
+        }
+
+        public static Builder newBuilder() {
+            return (new Node()).new Builder();
         }
 
         //Builder

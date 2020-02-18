@@ -14,8 +14,7 @@ public class JsonParser implements Parser<Tree> {
         return jsonParser == null ? jsonParser = new JsonParser() : jsonParser;
     }
 
-    private JsonParser() {
-    }
+    private JsonParser() {}
 
     public Tree read(String string) {
         try {

@@ -10,7 +10,6 @@ import java.io.StringWriter;
 
 public class XMLParser implements Parser<Tree> {
     static XMLParser parser;
-    ObjectMapper mapper = new ObjectMapper();
 
     public static XMLParser getInstance() {
         return parser == null ? parser = new XMLParser() : parser;

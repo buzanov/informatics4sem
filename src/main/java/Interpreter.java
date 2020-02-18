@@ -1,5 +1,6 @@
 import model.Tree;
 import model.Type;
+import parser.JsonParser;
 
 import java.util.Iterator;
 
@@ -12,7 +13,14 @@ public class Interpreter {
             add(tree, query);
         } else if (query.startsWith("delete ")) {
             delete(tree, query);
+        } else if (query.startsWith("save")) {
+            save(tree);
         }
+    }
+
+    private static void save(Tree tree) {
+        Saver.getInstance().save(tree);
+
     }
 
     private static void delete(Tree tree, String query) {
