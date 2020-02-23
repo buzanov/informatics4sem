@@ -1,0 +1,12 @@
+Task{state=model.states.Draft@5fd0d5ae, id=2, developerId=null, testerId=null, text='', error='null'} up() 
+and became to Task{state=model.states.Open@2d98a335, id=2, developerId=null, testerId=null, text='', error='null'} 
+Task{state=model.states.Open@2d98a335, id=2, developerId=null, testerId=null, text='', error='null'} up() 
+and became to Task{state=model.states.Assigned@16b98e56, id=2, developerId=22, testerId=null, text='', error='null'} 
+Task{state=model.states.Assigned@16b98e56, id=2, developerId=22, testerId=null, text='', error='null'} down() 
+and became to Task{state=model.states.Open@7ef20235, id=2, developerId=null, testerId=null, text='', error='null'} 
+Task{state=model.states.Draft@5fd0d5ae, id=2, developerId=null, testerId=null, text='novoezadanie', error='null'} up() 
+and became to Task{state=model.states.Open@2d98a335, id=2, developerId=null, testerId=null, text='novoezadanie', error='null'} 
+Task{state=model.states.Open@2d98a335, id=2, developerId=null, testerId=null, text='novoezadanie', error='null'} up() 
+and became to Task{state=model.states.Assigned@16b98e56, id=2, developerId=22, testerId=null, text='novoezadanie', error='null'} 
+Task{state=model.states.Assigned@16b98e56, id=2, developerId=22, testerId=null, text='novoezadanie', error='null'} down() 
+and became to Task{state=model.states.Open@7ef20235, id=2, developerId=null, testerId=null, text='novoezadanie', error='null'} 
