@@ -13,15 +13,15 @@ public class Testing extends State {
 
     @Override
     public void up(String... args) {
-        task.setState(Closed.class);
-        task.setTesterId(null);
-        task.setDeveloperId(null);
+        getContext().setState(Closed.class);
+        getContext().setTesterId(null);
+        getContext().setDeveloperId(null);
     }
 
     @Override
     public void down(String... args) {
-        task.setState(Assigned.class);
-        task.setError(Arrays.stream(args).reduce(String::concat).orElse(""));
+        getContext().setState(Assigned.class);
+        getContext().setError(Arrays.stream(args).reduce(String::concat).orElse(""));
 
     }
 }

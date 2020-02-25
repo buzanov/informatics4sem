@@ -11,12 +11,12 @@ public class Open extends State {
 
     @Override
     public void up(String... args) {
-        task.setDeveloperId(Integer.parseInt(args[0]));
-        task.setState(Assigned.class);
+        getContext().setDeveloperId(Integer.parseInt(args[0]));
+        getContext().setState(Assigned.class);
     }
 
     @Override
     public void down(String... args) {
-        task.setState(Backlog.class);
+        getContext().setState(Backlog.class);
     }
 }

@@ -11,7 +11,7 @@ public class Backlog extends State {
 
     @Override
     public void up(String... args) {
-        task.setState(Open.class);
+        getContext().setState(Open.class);
     }
 
     @Override

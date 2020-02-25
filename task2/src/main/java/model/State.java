@@ -18,7 +18,7 @@ public abstract class State {
         this.task = task;
     }
 
-    public State copy() {
+    public State copy(Task task) {
         try {
             return this.getClass().getConstructor(Task.class).newInstance(task);
         } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {

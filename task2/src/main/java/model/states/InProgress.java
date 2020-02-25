@@ -11,11 +11,11 @@ public class InProgress extends State {
 
     @Override
     public void up(String... args) {
-        task.setState(Resolved.class);
+        getContext().setState(Resolved.class);
     }
 
     @Override
     public void down(String... args) {
-        task.setState(Assigned.class);
+        getContext().setState(Assigned.class);
     }
 }

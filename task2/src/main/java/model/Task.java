@@ -54,7 +54,7 @@ public class Task implements ITask {
     }
 
     public Task copy() {
-        return new Task(state.copy(), null, developerId, testerId, text, error);
+        return new Task(state.copy(this), null, developerId, testerId, text, error);
     }
 
 

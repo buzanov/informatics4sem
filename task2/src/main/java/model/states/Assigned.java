@@ -11,12 +11,12 @@ public class Assigned extends State {
 
     @Override
     public void up(String... args) {
-        task.setState(InProgress.class);
+        getContext().setState(InProgress.class);
     }
 
     @Override
     public void down(String... args) {
-        task.setDeveloperId(null);
-        task.setState(Open.class);
+        getContext().setDeveloperId(null);
+        getContext().setState(Open.class);
     }
 }
