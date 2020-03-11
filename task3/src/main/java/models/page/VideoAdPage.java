@@ -1,5 +1,7 @@
 package models.page;
 
+import models.Browser;
+
 public class VideoAdPage extends AdPage {
     @Override
     protected Page goToAd() {
@@ -7,12 +9,8 @@ public class VideoAdPage extends AdPage {
     }
 
     @Override
-    public void goToPage(String name) {
-
-    }
-
-    @Override
-    public void goToLink(String link) {
-
+    public boolean goToPosition(int position) {
+        currentPosition = position;
+        return true;
     }
 }

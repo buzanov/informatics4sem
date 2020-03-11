@@ -7,12 +7,7 @@ public class TextAdPage extends AdPage {
     }
 
     @Override
-    public void goToPage(String name) {
-
-    }
-
-    @Override
-    public void goToLink(String link) {
-
+    public boolean goToPosition(int position) {
+        return false;
     }
 }

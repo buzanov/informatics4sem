@@ -4,13 +4,13 @@ import context.Context;
 import models.Browser;
 
 public class CommonPage extends Page {
-    @Override
-    public void goToPage(String name) {
-        Context.getPage(name);
+
+    public CommonPage() {
     }
 
     @Override
-    public void goToLink(String link) {
-
+    public boolean goToPosition(int position) {
+        currentPosition = position;
+        return true;
     }
 }
