@@ -1,8 +1,7 @@
-package model;
+package models;
 
 import service.Logger;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class LoggedTask implements ITask {

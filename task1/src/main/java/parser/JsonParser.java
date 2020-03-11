@@ -2,7 +2,7 @@ package parser;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import model.Tree;
+import models.Tree;
 
 import java.io.IOException;
 

@@ -1,9 +1,7 @@
-import model.ITask;
-import model.LoggedTask;
-import model.Task;
-import model.states.Draft;
+import models.ITask;
+import models.LoggedTask;
+import models.Task;
 
-import java.lang.reflect.Array;
 import java.util.*;
 
 public class Main {

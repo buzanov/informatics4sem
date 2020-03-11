@@ -1,10 +1,8 @@
 package parser;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import model.Tree;
+import models.Tree;
 
 import javax.xml.bind.*;
-import java.io.File;
 import java.io.StringReader;
 import java.io.StringWriter;
 

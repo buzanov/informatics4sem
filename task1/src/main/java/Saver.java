@@ -1,4 +1,4 @@
-import model.Tree;
+import models.Tree;
 import parser.JsonParser;
 
 import java.io.File;

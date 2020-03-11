@@ -1,0 +1,31 @@
+15
+AdVideoPage;page1;page1.html
+AdVideoPage;page2;page2.html
+Common;page3;page3.html
+Common;page4;page4.html
+Common;page5;page5.html
+TextAdPage;page6;page6.html
+AdVideoPage;page7;page7.html
+TextAdPage;page8;page8.html
+TextAdPage;page9;page9.html
+Common;AdPage1;AdPage1.html
+Common;AdPage2;AdPage2.html
+Common;AdPage3;AdPage3.html
+Common;AdPage4;AdPage4.html
+Common;AdPage5;AdPage5.html
+Common;AdPage6;AdPage6.html
+page1:page2 page3
+page2:page4 page5
+page3:page5 page6 page7
+page4:page2 page5
+page5:page1
+page6:
+page7:page1 page8 page9
+page8:page4 page6
+page9:page5
+AdPage1:
+AdPage2:
+AdPage3:
+AdPage4:
+AdPage5:
+AdPage6:

@@ -1,7 +1,5 @@
-import model.Tree;
-import model.Type;
-import parser.Parser;
-import parser.XMLParser;
+import models.Tree;
+import models.Type;
 
 import java.util.Iterator;
 

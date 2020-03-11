@@ -1,7 +1,7 @@
-package model.states;
+package models.states;
 
-import model.State;
-import model.Task;
+import models.State;
+import models.Task;
 
 public class Draft extends State {
 

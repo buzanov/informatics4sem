@@ -1,6 +1,5 @@
-import model.Tree;
-import model.Type;
-import parser.JsonParser;
+import models.Tree;
+import models.Type;
 
 import java.util.Iterator;
 

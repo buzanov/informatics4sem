@@ -1,11 +1,10 @@
-package model;
+package models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import model.states.Draft;
+import models.states.Draft;
 
 import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
 
 @Data
 @AllArgsConstructor
