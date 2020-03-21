@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import ru.itis.model.Note;
 
+import java.util.Arrays;
+
 @Component
 public class Interpreter {
     @Autowired
@@ -13,7 +15,7 @@ public class Interpreter {
         String[] param = string.split(" ");
         switch (param[0]) {
             case "add":
-                repositoryHandler.add(Note.builder().message(param[1]).build());
+                repositoryHandler.add(Note.builder().message(Arrays.stream(Arrays.copyOfRange(param, 1, param.length)).reduce((s, s2) -> s + " " + s2).get()).build());
                 break;
             case "out":
                 System.out.println(repositoryHandler.out());
